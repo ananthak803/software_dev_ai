@@ -10,6 +10,7 @@ import {
     Clock3,
     MoreHorizontal,
 } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const recentProjects = [
     {
@@ -119,6 +120,7 @@ function HomeHeader() {
 }
 
 function HomeHero() {
+    const navigate=useNavigate();
     return (
         <section className="mx-auto max-w-4xl text-center">
             {/* Badge */}
@@ -148,6 +150,7 @@ function HomeHero() {
             <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
                 {/* New Project */}
                 <button
+                    onClick={()=>navigate("/chat")}
                     type="button"
                     className="group flex items-center gap-2 rounded-xl bg-white px-5 py-3 text-sm font-semibold text-black shadow-xl shadow-white/10 transition hover:-translate-y-0.5 hover:bg-zinc-100"
                 >

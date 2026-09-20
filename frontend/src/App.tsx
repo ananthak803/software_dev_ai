@@ -1,11 +1,15 @@
 import Chat from "./components/chat/Chat"
-// import Home from "./components/Home"
+import Home from "./components/Home"
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 const App = () => {
   return (
-    // <div className="text-2xl font-bold underline">App</div>
-    // <Home />
-    <Chat />
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/chat" element={<Chat />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 

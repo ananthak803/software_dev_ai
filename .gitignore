@@ -2,6 +2,8 @@
 .env.*
 !.env.example
 .vscode/
+__pycache__
+backend/app/__pycache__
 
 #frontend
 frontend/node_modules/
